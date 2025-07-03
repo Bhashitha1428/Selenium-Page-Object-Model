@@ -32,7 +32,7 @@ public class TC001_RegisterUserTest {
         homePage.selectRegisterMenu();
 
        RegisterPage registerPage=new RegisterPage(driver);
-       registerPage.setFirstName("BMR");
+       registerPage.setFirstName("Bhashitha");
        registerPage.setLastName("Ranchagoda");
        registerPage.setPhoneNumber("0716779857");
        registerPage.setEmail("bmr@gmail.com");
