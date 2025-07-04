@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,41 +36,51 @@ public class RegisterPageUpdated {
     WebElement submitbtn_ele;
 
 
-    public void setFirstName(String firstName) {
+    public RegisterPageUpdated setFirstName(String firstName) {
         firstName_ele.sendKeys(firstName);
+        return this;
     }
 
-    public void setLastName(String lastName) {
+    public RegisterPageUpdated setLastName(String lastName) {
         lastName_ele.sendKeys(lastName);
+        return this;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public RegisterPageUpdated setPhoneNumber(String phoneNumber) {
         phone_ele.sendKeys(phoneNumber);
+        return this;
     }
 
-    public void setUserName(String userName) {
+    public RegisterPageUpdated setUserName(String userName) {
         userName_ele.sendKeys(userName);
+        return this;
     }
 
-    public void setCountry() {
+    public RegisterPageUpdated setCountry() {
         Select countryList = new Select(country_ele);
         countryList.selectByIndex(5);
+        return this;
     }
 
-    public void setEmail(String email) {
+    public RegisterPageUpdated setEmail(String email) {
         email_ele.sendKeys(email);
+        return this;
     }
 
-    public void setPassword(String password) {
+    public RegisterPageUpdated setPassword(String password) {
         pwd_ele.sendKeys(password);
+        return this;
     }
 
-    public void setConfirmPassword(String confirmPassword) {
+    public RegisterPageUpdated setConfirmPassword(String confirmPassword) {
         confirmPwd_ele.sendKeys(confirmPassword);
+        return this;
     }
 
-    public void submit() {
+    public RegisterSuccessPageUpdated submit() throws InterruptedException {
+        Thread.sleep(5000);
         submitbtn_ele.click();
+        return new RegisterSuccessPageUpdated(driver);
     }
 
 
